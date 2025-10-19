@@ -48,3 +48,10 @@ python3.11 -X utf8
 python3.11 -X importtime
 ```
 
+```shell
+# 使用调试器
+python3.11 -m pdb script.py
+# 使用调试器，并指定端口
+python3.11 -m pdb -p 1234 script.py
+```
+
