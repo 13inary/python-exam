@@ -7,4 +7,16 @@ new_str = template.format_map(src_map)
 print("template str:", new_str, "\n") # Name: Alice, Age: 30
 
 
+# 处理map没有模板需要的数据的报错问题
+# from collections import defaultdict
+class SafeDict(dict):
+    def __missing__(self, key):
+        return f"<{key} missing>"
+
+data = SafeDict({"city": "Paris"})
+print("type of data:", type(data))
+print("data:", data)
+print("{city}, {country}".format_map(data))  # 输出：Paris, <country missing>
+
+
 
