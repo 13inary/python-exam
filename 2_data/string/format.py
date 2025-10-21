@@ -1,5 +1,16 @@
 
-# 格式化-可复用模板、支持复杂格式
+# 格式化-最高效、可嵌入表达式、无法存储模板
+name = "龙"
+messages = f"新年快乐！祝你{name}年身体健康"
+# 转义花括号
+messages = f"}}{name}{{，转义花括号" # }}表示}、{{表示{
+print("messages:", messages, "\n")
+
+
+
+
+
+# 格式化-可复用模板、支持复杂格式、自定义对象格式化
 messages = "新年快乐！祝你{}年身体健康".format("龙") # 按属虚
 messages = "新年快乐！祝你{0}年身体健康".format("龙") # 按下标
 messages = "新年快乐！祝你{name}年身体健康".format(name="龙") # 按名称
@@ -37,22 +48,8 @@ print("{!s} {!r} {!a}\n".format("测试", "测试", "测试")) # 测试 '测试'
 
 
 
-# 格式化-最高效、可嵌入表达式、无法存储模板
-name = "龙"
-messages = f"新年快乐！祝你{name}年身体健康"
-# 转义花括号
-messages = f"}}{name}{{，转义花括号" # }}表示}、{{表示{
-print("messages:", messages, "\n")
 
-
-
-
-# 格式化-简洁语法
-
-
-
-
-# 格式化-安全防注入
+# 格式化-安全防注入或代码复用
 # 定义一个字符串共用模板，里面有变化的数据使用 {xxx} 占位，使用 format 方法传入数据
 
 # map数据填充模板中的空位，这里map需要具备模板需要的所有数据，否则会报错
@@ -71,5 +68,27 @@ data = SafeDict({"city": "Paris"})
 print("type of data:", type(data))
 print("data:", data)
 print("{city}, {country}".format_map(data))  # 输出：Paris, <country missing>
+
+
+
+
+
+# 格式化-简洁语法或旧代码兼容
+# 元组传递参数
+print("%% tuple: (%d, %d)" % (3, 4))
+# 字典传递参数
+print("%% map: %(x)d, %(y)d" % {"x": 3, "y": 4})
+# float
+print("%% float: %.2f" % 3.1415926)
+# 右对齐
+print("%% right: %10d" % 123)
+# 左对齐
+print("%% left: %-10d" % 123)
+# 十六进制
+print("%% hex: %x" % 255)
+# 八进制
+print("%% oct: %o" % 255)
+# 零填充数字，小数点占用位数
+print("%% zero: %05d" % 123) # 00123
 
 
