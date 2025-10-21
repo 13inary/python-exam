@@ -21,16 +21,17 @@
 
 #### 字符串
 
-[基础操作](./2_data/string/base.py)
-[新建](./2_data/string/new.py)
 [对齐、填充](./2_data/string/align.py)
-[更新](./2_data/string/update.py)
-[判断](./2_data/string/check.py)
+[基础操作](./2_data/string/base.py)
 [修改](./2_data/string/change.py)
+[判断](./2_data/string/check.py)
+[格式化](./2_data/string/format.py)
 [拼接](./2_data/string/join.py)
+[新建](./2_data/string/new.py)
+[正则](./2_data/string/regular.py)
 [分割](./2_data/string/split.py)
 [子字符串](./2_data/string/sun_str.py)
-[格式化](./2_data/string/format.py)
+[更新](./2_data/string/update.py)
 
 #### 集合
 [基本知识](./2_data/set/set.py#L0)
