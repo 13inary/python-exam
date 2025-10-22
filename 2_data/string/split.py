@@ -1,6 +1,6 @@
 fater_str3 = "string,string\n,string"
 
-# 基本用法
+# 基本用法，可选参数为maxsplit=
 str_list0 = fater_str3.split() # 默认分割符：连续的 空格、制表符(\t)、换行符(\n)等空白字符
 print("split:", str_list0, "\n") # ['string,string', ',string']
 
