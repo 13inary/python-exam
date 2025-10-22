@@ -1,12 +1,16 @@
+fater_str3 = "string,string\n,string"
+
+# 基本用法
+str_list0 = fater_str3.split() # 默认分割符：连续的 空格、制表符(\t)、换行符(\n)等空白字符
+print("split:", str_list0, "\n") # ['string,string', ',string']
 
 # 分割字符串-从左往右分割字符串
-fater_str3 = "string,string\n,string"
 str_list = fater_str3.split(",", -1) # ['string', 'string\n', 'string'] -1可以不写
-print("split:", str_list, "\n")
+print("split,-1:", str_list, "\n")
 
 # 分割字符串-从右往左分割字符串
 str_list2 = fater_str3.rsplit(",", 1) # ['string,string\n', 'string']
-print("rsplit:", str_list2, "\n")
+print("rsplit,1:", str_list2, "\n")
 
 # 统一处理 \n、\r、\r\n 等换行符，不保留行尾空字符串，按行分割，并去掉换行
 str_list3 = fater_str3.splitlines() # ['string,string', ',string']
